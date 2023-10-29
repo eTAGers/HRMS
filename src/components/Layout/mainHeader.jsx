@@ -253,8 +253,8 @@ export default function MainHeader() {
 
         <div className="main-sidebar sidebar-style-1">
             <aside id="sidebar-wrapper">
-                <div className="sidebar-brand">
-                    <a href="https://etagers.in" style={{textTransform:"none"}}>eTAGers HRMS</a>
+                <div className="sidebar-brand" style={{borderBottom:"1px solid #f6f8f9"}}>
+                    <a href="https://etagers.in" style={{textTransform:"none", fontSize:"24px"}}>eTAGers HRMS</a>
                 </div>
                 <ul className="sidebar-menu">
                     <li className="dropdown">

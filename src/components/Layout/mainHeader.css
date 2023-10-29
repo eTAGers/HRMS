@@ -1,4 +1,4 @@
-.sticky{
+.sticky {
   position: fixed !important;
   top: 70px;
   left: 290px !important;
@@ -9,27 +9,60 @@
   background: #fff;
   z-index: 9;
 }
+.main-wrapper .main-sidebar .sidebar-brand {
+  height: 70px;
+  line-height: 70px;
+}
+.main-wrapper .main-sidebar {
+  background: #1e293b;
+  color: #fff;
+}
+body.layout-4 .main-sidebar .dropdown .nav-link,
+body.layout-4 .main-wrapper .dropdown .nav-link,
+.main-wrapper .main-sidebar .sidebar-brand a {
+  color: #fff;
+}
+body.layout-4 .main-sidebar .dropdown .nav-link:hover {
+  color: #1e293b;
+}
 body.layout-4 nav.navbar.navbar-expand-lg.main-navbar {
-  width: calc(100% - 290px);
+  width: calc(100% - 315px);
   position: fixed;
-  top: 0;
-  background: #f0eff1;
-  left:270px ;
+  top: 15px;
+  background: #1e293b;
+  color: #fff;
+  left: 290px;
   z-index: 900;
+  border-radius: 5px;
 }
 body.layout-4 .navbar {
   left: auto;
 }
-body.layout-4 .main-footer{
+.navbar .form-inline .form-control,
+.navbar .form-inline .form-control::placeholder,
+.navbar .form-inline .btn,
+.main-wrapper .navbar .form-inline .btn:hover {
+  background-color: #1e293b;
+  border-color: #fff;
+  color: #fff;
+}
+.navbar .form-inline .btn {
+  padding: 10px 15px;
+}
+.main-wrapper .navbar .form-inline .btn:hover {
+  border-color: #fff !important;
+}
+body.layout-4 .main-footer {
   position: fixed;
   bottom: 0;
-  left:290px;
+  left: 290px;
   width: calc(100% - 315px);
   background: #f0eff1;
 }
-a.MuiTab-root{
-font-family: var(--bs-body-font-family);
-text-transform: capitalize;}
-a.MuiTab-root:hover{
+a.MuiTab-root {
+  font-family: var(--bs-body-font-family);
+  text-transform: capitalize;
+}
+a.MuiTab-root:hover {
   text-decoration: none;
 }

@@ -1,8 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Header from "./Header";
 import { makeStyles } from "@mui/styles";
-import Footer from "./Footer";
 import MainHeader from "./mainHeader";
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -12,7 +10,8 @@ const useStyles = makeStyles((theme) => ({
     position: "relative",
     left: "290px",
     width: "calc(100% - 315px)",
-    margin:"75px 0"
+  
+    margin:"105px 0"
 ,  },
   wrapper: {
     display: "flex",
@@ -38,7 +37,6 @@ const MainLayout = () => {
         <div className="navbar-bg"></div>
         <MainHeader />
         <div className={classes.root} style={{ backgroundColor: "#fff" }}>
-          {/* <Header /> */}
           <div className={classes.wrapper}>
             <div className={classes.contentContainer}>
               <div className={classes.content}>
@@ -47,7 +45,6 @@ const MainLayout = () => {
             </div>
           </div>
         </div>
-        <Footer />
       </div>
     </div>
   );
