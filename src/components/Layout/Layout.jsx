@@ -16,11 +16,12 @@ const useStyles = makeStyles((theme) => ({
   wrapper: {
     display: "flex",
     flex: "1 1 auto",
-    
+    width:"100%",
   },
   contentContainer: {
     display: "flex",
     flex: "1 1 auto",
+    width:"100%",
   },
   content: {
     flex: "1 1 auto",

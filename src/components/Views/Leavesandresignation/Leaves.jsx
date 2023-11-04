@@ -1,146 +1,229 @@
 import React from "react";
-import { Grid } from "@mui/material";
-import Button from "@mui/material/Button";
-import Breadcrumbs from "@mui/material/Breadcrumbs";
-import { Link as RouterLink } from "react-router-dom";
+import { Box } from "@mui/material";
 import Typography from "@mui/material/Typography";
-import { DataGrid } from "@mui/x-data-grid";
+import PropTypes from "prop-types";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import useSticky from "../Users/Strickyheader";
+import classNames from "classnames";
+import { Link } from "react-router-dom";
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`vertical-tabpanel-${index}`}
+      aria-labelledby={`vertical-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box sx={{ p: 3 }}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
+
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.number.isRequired,
+  value: PropTypes.number.isRequired,
+};
+function samePageLinkNavigation(event) {
+  if (
+    event.defaultPrevented ||
+    event.button !== 0 || // ignore everything but left-click
+    event.metaKey ||
+    event.ctrlKey ||
+    event.altKey ||
+    event.shiftKey
+  ) {
+    return false;
+  }
+  return true;
+}
+
+function LinkTab(props) {
+  return (
+    <Tab
+      component="a"
+      onClick={(event) => {
+        // Routing libraries handle this, you can remove the onClick handle when using them.
+        if (samePageLinkNavigation(event)) {
+          event.preventDefault();
+        }
+      }}
+      {...props}
+    />
+  );
+}
 export default function Leaves() {
+  const [gender, setGender] = React.useState("");
+  const { sticky, stickyRef } = useSticky();
+  const handlegenderChange = (event) => {
+    setGender(event.target.value);
+  };
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  const [tabValue, settabValue] = React.useState(0);
+
+  const handleHeaderTabChange = (event, newValue) => {
+    // event.type can be equal to focus with selectionFollowsFocus.
+    if (
+      event.type !== "click" ||
+      (event.type === "click" && samePageLinkNavigation(event))
+    ) {
+      settabValue(newValue);
+    }
+  };
+
   return (
     <>
-      <Grid container sx={{ backgroundColor: "#f6f8f9" }}>
-        <Grid rows ml={"3.8rem"} mt={4}>
-          <Grid md={12}>
-            <Breadcrumbs aria-label="breadcrumb">
-              <RouterLink to={"/"}>Home</RouterLink>
-              <RouterLink to={"/Leaves"}>Leaves and Resigntion</RouterLink>
-              <Typography color="text.primary">
-                Leaves
-              </Typography>
-            </Breadcrumbs>
-          </Grid>
-        </Grid>
-      </Grid>
-      <Grid container >
-      <Grid rows mx={"3.8rem"} mt={4} md={12} direction={"row"} display={"flex"}>
-          <Grid md={6}>
-            <h4>Leaves</h4>
-          </Grid>
-          <Grid md={6} style={{display:"flex",justifyContent:"flex-end"}}>
-           <RouterLink to={"/Leaves/Addleaves"}> <Button variant="contained">+ Create Leaves</Button></RouterLink>
-          </Grid>
-        </Grid>
-        </Grid>
-        <Grid container md={12}><Grid rows p={"2rem 3.8rem"} md={12}> 
-        <DataGrid
-            rows={[
-              {
-                id: 1,
-                col1: "Hello",
-                col2: "World",
-                col3: "World",
-                col4: "World",
-                col5: "World",
-                col6: "World",
-              },
-              {
-                id: 2,
-                col1: "DataGridPro",
-                col2: "World",
-                col3: "World",
-                col4: "World",
-                col5: "World",
-                col6: "World",
-              },
-              {
-                id: 3,
-                col1: "MUI",
-                col2: "World",
-                col3: "World",
-                col4: "World",
-                col5: "World",
-                col6: "World",
-              },
-              {
-                id: 4,
-                col1: "DataGridPro",
-                col2: "World",
-                col3: "World",
-                col4: "World",
-                col5: "World",
-                col6: "World",
-              },
-              {
-                id: 5,
-                col1: "MUI",
-                col2: "World",
-                col3: "World",
-                col4: "World",
-                col5: "World",
-                col6: "World",
-              },
-              {
-                id: 6,
-                col1: "MUI",
-                col2: "World",
-                col3: "World",
-                col4: "World",
-                col5: "World",
-                col6: "World",
-              },
-              {
-                id: 7,
-                col1: "MUI",
-                col2: "World",
-                col3: "World",
-                col4: "World",
-                col5: "World",
-                col6: "World",
-              },
-              {
-                id: 8,
-                col1: "MUI",
-                col2: "World",
-                col3: "World",
-                col4: "World",
-                col5: "World",
-                col6: "World",
-              },
-              {
-                id: 9,
-                col1: "MUI",
-                col2: "World",
-                col3: "World",
-                col4: "World",
-                col5: "World",
-                col6: "World",
-              },
-              {
-                id: 10,
-                col1: "MUI",
-                col2: "World",
-                col3: "World",
-                col4: "World",
-                col5: "World",
-                col6: "World",
-              },
-            ]}
-            columns={[
-              { field: "col1", headerName: "Employee Id", width: 150 },
-              { field: "col2", headerName: "Name", width: 150 },
-              { field: "col3", headerName: "Leave Type", width: 150 },
-              { field: "col4", headerName: "Duration", width: 150 },
-              { field: "col5", headerName: "Date", width: 150 },
-              { field: "col6", headerName: "Range", width: 150 },
-              { field: "col7", headerName: "Status", width: 150 },
-              { field: "col8", headerName: "Action", width: 150 },
-            ]}
-            sx={{ display: "flex", justifyContent: "center", width:"100%" }}
-            initialState={{
-              pagination: { paginationModel: { pageSize: 5 } },
-            }}
-            pageSizeOptions={[5, 10, 25]}
-          /></Grid></Grid>
+      <nav
+        ref={stickyRef}
+        className={classNames("navbar navbar-default", { sticky })}
+        style={{ height: "60px", borderBottom: "1px solid #e9ecef" }}
+      >
+        <div className="container-fluid justify-content-start">
+          {/* <p className="navbar-header m-0 px-4 font-weight-bold">Employees</p> */}
+          <Tabs
+            value={tabValue}
+            onChange={handleHeaderTabChange}
+            aria-label="nav tabs example"
+          >
+            <Tab label="Leaves" href="/Leaves" />
+            <Tab label="Add Leaves" href="/Leaves/Addleaves" />
+            <Tab label="Holidays" href="/Holidays" />
+          </Tabs>
+        </div>
+      </nav>
+      <div className="card">
+        <div className="card-body">
+          <div className="employeeInfo">
+            <div className="row">
+              <div class="col-12 col-md-4 col-lg-3">
+                <div class="card card-primary">
+                  <div class="card-header">
+                    <h4>Casual Leaves</h4>
+                  </div>
+                  <div class="card-body">
+                    <p>
+                      Available: 5
+                    </p>
+                    <p>
+                      Taken: 2
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4 col-lg-3">
+                <div class="card card-primary">
+                  <div class="card-header">
+                    <h4>Earn Leaves</h4>
+                  </div>
+                  <div class="card-body">
+                    <p>
+                      Available: 5
+                    </p>
+                    <p>
+                      Taken: 2
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4 col-lg-3">
+                <div class="card card-primary">
+                  <div class="card-header">
+                    <h4>Sick Leaves</h4>
+                  </div>
+                  <div class="card-body">
+                    <p>
+                      Available: 5
+                    </p>
+                    <p>
+                      Taken: 2
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4 col-lg-3">
+                <div class="card card-primary">
+                  <div class="card-header">
+                    <h4>Compensary Off</h4>
+                  </div>
+                  <div class="card-body">
+                    <p>
+                      Available: 5
+                    </p>
+                    <p>
+                      Taken: 2
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4 col-lg-3">
+                <div class="card card-primary">
+                  <div class="card-header">
+                    <h4>Patenity Leave</h4>
+                  </div>
+                  <div class="card-body">
+                    <p>
+                      Available: 5
+                    </p>
+                    <p>
+                      Taken: 2
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4 col-lg-3">
+                <div class="card card-primary">
+                  <div class="card-header">
+                    <h4>With pay</h4>
+                  </div>
+                  <div class="card-body">
+                    <p>
+                      Available: 5
+                    </p>
+                    <p>
+                      Taken: 2
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4 col-lg-3">
+                <div class="card card-primary">
+                  <div class="card-header">
+                    <h4>Without pay</h4>
+                  </div>
+                  <div class="card-body">
+                    <p>
+                      Available: 5
+                    </p>
+                    <p>
+                      Taken: 2
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md-12 d-flex justify-content-center align-items-center">
+                <Link class="btn btn-outline-info px-4 my-2" to={"/Leaves/Addleaves"}>
+                  Apply Leave
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

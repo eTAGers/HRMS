@@ -285,6 +285,18 @@ export default function MainHeader() {
                             <li><RouterLink className="nav-link" to={"/Employee"}>Employees</RouterLink></li>
                         </ul> */}
                     </li>
+                    
+                    <li className="dropdown">
+                    <RouterLink className="nav-link" to={"/Mainmenu"}>
+                        <i className="fas fa-fire"></i><span>Menu</span></RouterLink>
+                       
+                    </li>
+                    
+                    <li className="dropdown">
+                    <RouterLink className="nav-link" to={"/Client"}>
+                        <i className="fas fa-fire"></i><span>Client</span></RouterLink>
+                       
+                    </li>
                     <li className="dropdown">
                         <a href="#" className="nav-link"><i className="fas fa-th"></i> <span>Loan & Reimburs</span></a>
                         {/* <ul className="dropdown-menu">

@@ -16,7 +16,6 @@ import Createpayscales from "./components/Views/Payscale/Createpayscales";
 import Dailyattedance from "./components/Views/Attedance/Dailyattendance";
 import Attedancereport from "./components/Views/Attedance/Attendancereport";
 import Leaves from "./components/Views/Leavesandresignation/Leaves";
-import Addleave from "./components/Views/Leavesandresignation/Addleave";
 import Resignation from "./components/Views/Leavesandresignation/Resignation";
 import Assignwork from "./components/Views/Employeedailytask/Assignwork";
 import Createdailyexpance from "./components/Views/Employeedailytask/Createdailyexpance";
@@ -49,6 +48,12 @@ import Projectrequest from "./components/Views/Projectandmaterials/Projectreques
 import Materialrequest from "./components/Views/Projectandmaterials/Materialrequest";
 import Purchaseorders from "./components/Views/Purchaseitems/Purchaseorders";
 import Login from "./components/Views/LoginandRegister/Login";
+import Mainmenu from "./components/Views/Menu/Mainmenu";
+import Submenu from "./components/Views/Menu/Submenu";
+import Client from "./components/Views/Client/Client";
+import Viewleaves from "./components/Views/Leavesandresignation/Viewleaves";
+import Addleaves from "./components/Views/Leavesandresignation/Addleaves";
+import Holidays from "./components/Views/Leavesandresignation/Holidays";
 export default function Routerdata() {
   let element = useRoutes([
     {
@@ -73,7 +78,9 @@ export default function Routerdata() {
         { path: "Attedancereport", element: <Attedancereport /> },
         { path: "Leaves", element: <Leaves /> },
         { path: "Resignation", element: <Resignation /> },
-        { path: "Leaves/Addleaves", element: <Addleave /> },
+        { path: "Leaves/Addleaves", element: <Addleaves /> },
+        { path: "Leaves/Viewleaves", element: <Viewleaves /> },
+        { path: "Holidays", element: <Holidays /> },
         { path: "Assignwork", element: <Assignwork /> },
         { path: "Dailyexpance", element: <Dailyexpance /> },
         { path: "Employeereports", element: <Employeereports /> },
@@ -104,6 +111,10 @@ export default function Routerdata() {
         { path: "Projectrequest", element: <Projectrequest /> },
         { path: "Materialrequest", element: <Materialrequest /> },
         { path: "Purchaseorders", element: <Purchaseorders /> },
+        
+        { path: "Mainmenu", element: <Mainmenu /> },
+        { path: "Submenu", element: <Submenu /> },
+        { path: "Client", element: <Client /> },
       ],
     },
     {

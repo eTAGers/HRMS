@@ -4,3 +4,24 @@
     border-radius: 10px;
     margin-bottom: 15px;
 } 
+.employeeInfo .form-group{
+    margin-bottom: 10px;
+}
+.employeeInfo .form-group label{
+    margin-bottom: 0.2em;
+}
+#personalMyTab.nav-pills .nav-item .nav-link,
+#nominationMyTab.nav-pills .nav-item .nav-link{
+    margin: 0 10px;
+}
+#personalMyTab.nav-pills .nav-item .nav-link.active,
+#personalMyTab.nav-pills .nav-item .nav-link:hover,
+#nominationMyTab.nav-pills .nav-item .nav-link.active,
+#nominationMyTab.nav-pills .nav-item .nav-link:hover {
+    box-shadow: none;
+    color: #563d7c;
+    background-color: #efeef0;
+    border-bottom: 2px solid #563d7c;
+    border-radius: 0;
+    margin: 0 10px;
+}

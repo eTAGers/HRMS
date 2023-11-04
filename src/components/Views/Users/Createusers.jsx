@@ -1,30 +1,12 @@
 import React from "react";
-import TextField from "@mui/material/TextField";
-import { AppBar, Box, Toolbar } from "@mui/material";
-import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
-import CloudUploadIcon from "@mui/icons-material/CloudUpload";
+import { Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import { Grid } from "@mui/material";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import SendIcon from "@mui/icons-material/Send";
 import PropTypes from "prop-types";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import useSticky from "./Strickyheader";
 import classNames from "classnames";
-import BadgeIcon from "@mui/icons-material/Badge";
-import PermContactCalendarIcon from "@mui/icons-material/PermContactCalendar";
-import ContactPhoneIcon from "@mui/icons-material/ContactPhone";
-import ContactEmergencyIcon from "@mui/icons-material/ContactEmergency";
-import ContactMailIcon from "@mui/icons-material/ContactMail";
 import "./Createusers.css";
 const VisuallyHiddenInput = styled("input")({
   clip: "rect(0 0 0 0)",
@@ -140,26 +122,26 @@ export default function Createusers() {
           <ul className="nav nav-pills" id="myTab3" role="tablist">
             <li className="nav-item">
               <a
-                className="nav-link"
-                id="home-tab3"
+                className="nav-link  active show"
+                id="professional-tab1"
                 data-toggle="tab"
-                href="#home3"
+                href="#professional"
                 role="tab"
                 aria-controls="Professional"
-                aria-selected="false"
+                aria-selected="true"
               >
                 Professional
               </a>
             </li>
             <li className="nav-item">
               <a
-                className="nav-link active show"
-                id="profile-tab3"
+                className="nav-link"
+                id="communication-tab2"
                 data-toggle="tab"
-                href="#profile3"
+                href="#communication"
                 role="tab"
                 aria-controls="Communication"
-                aria-selected="true"
+                aria-selected="false"
               >
                 Communication
               </a>
@@ -167,9 +149,9 @@ export default function Createusers() {
             <li className="nav-item">
               <a
                 className="nav-link"
-                id="contact-tab3"
+                id="personal-tab3"
                 data-toggle="tab"
-                href="#contact3"
+                href="#personal"
                 role="tab"
                 aria-controls="Personal"
                 aria-selected="false"
@@ -180,9 +162,9 @@ export default function Createusers() {
             <li className="nav-item">
               <a
                 className="nav-link"
-                id="contact-tab3"
+                id="education-tab4"
                 data-toggle="tab"
-                href="#contact3"
+                href="#education"
                 role="tab"
                 aria-controls="Education"
                 aria-selected="false"
@@ -193,9 +175,9 @@ export default function Createusers() {
             <li className="nav-item">
               <a
                 className="nav-link"
-                id="contact-tab3"
+                id="nomination-tab5"
                 data-toggle="tab"
-                href="#contact3"
+                href="#nomination"
                 role="tab"
                 aria-controls="Nomination"
                 aria-selected="false"
@@ -206,10 +188,10 @@ export default function Createusers() {
           </ul>
           <div className="tab-content" id="myTabContent2">
             <div
-              className="tab-pane fade"
-              id="home3"
+              className="tab-pane fade active show"
+              id="professional"
               role="tabpanel"
-              aria-labelledby="home-tab3"
+              aria-labelledby="professional-tab1"
             >
               <div className="card">
                 <div className="card-body">
@@ -753,27 +735,1505 @@ export default function Createusers() {
               </div>
             </div>
             <div
-              className="tab-pane fade active show"
-              id="profile3"
+              className="tab-pane fade"
+              id="communication"
               role="tabpanel"
-              aria-labelledby="profile-tab3"
+              aria-labelledby="communication-tab2"
             >
-              Sed sed metus vel lacus hendrerit tempus. Sed efficitur velit
-              tortor, ac efficitur est lobortis quis. Nullam lacinia metus erat,
-              sed fermentum justo rutrum ultrices. Proin quis iaculis tellus.
-              Etiam ac vehicula eros, pharetra consectetur dui.
+              <div className="card">
+                <div className="card-body">
+                  <div className="employeeInfo ">
+                    <div className="titleName">
+                      <h6>Personal Address</h6>
+                    </div>
+                    <div className="row">
+                      <div className="col-md-4">
+                        <div className="row">
+                          <div className="col-md-12">
+                            <div class="form-group">
+                              <label>Address</label>
+                              <textarea
+                                class="form-control"
+                                rows={5}
+                                style={{ height: "127px !important" }}
+                              ></textarea>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-md-8">
+                        <div className="row">
+                          <div className="col-md-4">
+                            <div className="form-group">
+                              <label>Country</label>
+                              <select className="form-control">
+                                <option>-- Select --</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Other</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div className="col-md-4">
+                            <div className="form-group">
+                              <label>State</label>
+                              <select className="form-control">
+                                <option>-- Select --</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Other</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div className="col-md-4">
+                            <div className="form-group">
+                              <label>District</label>
+                              <select className="form-control">
+                                <option>-- Select --</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Other</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div className="col-md-4">
+                            <div className="form-group">
+                              <label>City</label>
+                              <input type="text" className="form-control" />
+                            </div>
+                          </div>
+                          <div className="col-md-4">
+                            <div className="form-group">
+                              <label>Pincode</label>
+                              <input type="text" className="form-control" />
+                            </div>
+                          </div>
+                          <div className="col-md-4">&nbsp;</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="sameAddress">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="defaultCheck1"
+                        />
+                        <label class="form-check-label" for="defaultCheck1">
+                          Same for Permanent Address
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="employeeInfo ">
+                    <div className="titleName">
+                      <h6>Permanent Address</h6>
+                    </div>
+                    <div className="row">
+                      <div className="col-md-4">
+                        <div className="row">
+                          <div className="col-md-12">
+                            <div class="form-group">
+                              <label>Address</label>
+                              <textarea
+                                class="form-control"
+                                rows={5}
+                                style={{ height: "127px !important" }}
+                              ></textarea>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-md-8">
+                        <div className="row">
+                          <div className="col-md-4">
+                            <div className="form-group">
+                              <label>Country</label>
+                              <select className="form-control">
+                                <option>-- Select --</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Other</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div className="col-md-4">
+                            <div className="form-group">
+                              <label>State</label>
+                              <select className="form-control">
+                                <option>-- Select --</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Other</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div className="col-md-4">
+                            <div className="form-group">
+                              <label>District</label>
+                              <select className="form-control">
+                                <option>-- Select --</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Other</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div className="col-md-4">
+                            <div className="form-group">
+                              <label>City</label>
+                              <input type="text" className="form-control" />
+                            </div>
+                          </div>
+                          <div className="col-md-4">
+                            <div className="form-group">
+                              <label>Pincode</label>
+                              <input type="text" className="form-control" />
+                            </div>
+                          </div>
+                          <div className="col-md-4">&nbsp;</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div
               className="tab-pane fade"
-              id="contact3"
+              id="personal"
               role="tabpanel"
-              aria-labelledby="contact-tab3"
+              aria-labelledby="personal-tab3"
             >
-              Vestibulum imperdiet odio sed neque ultricies, ut dapibus mi
-              maximus. Proin ligula massa, gravida in lacinia efficitur,
-              hendrerit eget mauris. Pellentesque fermentum, sem interdum
-              molestie finibus, nulla diam varius leo, nec varius lectus elit id
-              dolor.
+              <div className="card">
+                <div className="card-body">
+                  <div className="employeeInfo ">
+                    <div className="row">
+                      <div className="col-md-3">
+                        <div className="form-group">
+                          <label>Marital Status</label>
+                          <select className="form-control">
+                            <option>-- Select --</option>
+                            <option>option</option>
+                            <option>option</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div className="col-md-3">
+                        <div className="form-group">
+                          <label>Marriage Date</label>
+                          <input type="Date" className="form-control" />
+                        </div>
+                      </div>
+
+                      <div className="col-md-3">
+                        <div className="form-group">
+                          <label>Blood Group</label>
+                          <input type="text" className="form-control" />
+                        </div>
+                      </div>
+                      <div className="col-md-3">
+                        <div className="form-group">
+                          <label>Personal Mobile No</label>
+                          <input type="text" className="form-control" />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="col-md-3">
+                        <div className="form-group">
+                          <label>Official Mobile No</label>
+                          <input type="text" className="form-control" />
+                        </div>
+                      </div>
+
+                      <div className="col-md-3">
+                        <div className="form-group">
+                          <label>Emergency Contact Name</label>
+                          <input type="text" className="form-control" />
+                        </div>
+                      </div>
+
+                      <div className="col-md-3">
+                        <div className="form-group">
+                          <label>Emergency Contact No: 1</label>
+                          <input type="text" className="form-control" />
+                        </div>
+                      </div>
+                      <div className="col-md-3">
+                        <div className="form-group">
+                          <label>Emergency Contact No: 2</label>
+                          <input type="text" className="form-control" />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="col-md-3">
+                        <div className="form-group">
+                          <label>Personal email</label>
+                          <input type="text" className="form-control" />
+                        </div>
+                      </div>
+
+                      <div className="col-md-3">
+                        <div className="form-group">
+                          <label>Father's/Spouse's Name</label>
+                          <input type="text" className="form-control" />
+                        </div>
+                      </div>
+
+                      <div className="col-md-3">
+                        <div className="form-group">
+                          <label>Weight (in Kg)</label>
+                          <input type="text" className="form-control" />
+                        </div>
+                      </div>
+                      <div className="col-md-3">
+                        <div className="form-group">
+                          <label>Height (in Feet)</label>
+                          <input type="text" className="form-control" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="employeeInfo ">
+                    <div className="row">
+                      <div className="col-md-6 d-flex align-items-center">
+                        <div className="titleName">
+                          <h6>Relation Ship</h6>
+                        </div>
+                      </div>
+                      <div className="col-md-6 d-flex justify-content-end">
+                        <button class="btn btn-outline-info px-4 my-2">
+                          Add <i class="fa-solid fa-plus"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="col-md-12">
+                        <table class="table table-bordered">
+                          <thead>
+                            <tr>
+                              <th scope="col">#</th>
+                              <th scope="col">Name</th>
+                              <th scope="col">Relationship Type</th>
+                              <th scope="col">Dependancy</th>
+                              <th scope="col">Date of Birth</th>
+                              <th scope="col">Blood Group</th>
+                              <th scope="col">Gender</th>
+                              <th scope="col">Action</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">1</th>
+                              <td>Mark</td>
+                              <td>Otto</td>
+                              <td>@mdo</td>
+                              <td>Mark</td>
+                              <td>Otto</td>
+                              <td>@mdo</td>
+                              <td>@mdo</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2</th>
+                              <td>Mark</td>
+                              <td>Otto</td>
+                              <td>@mdo</td>
+                              <td>Mark</td>
+                              <td>Otto</td>
+                              <td>@mdo</td>
+                              <td>@mdo</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">3</th>
+                              <td>Mark</td>
+                              <td>Otto</td>
+                              <td>@mdo</td>
+                              <td>Mark</td>
+                              <td>Otto</td>
+                              <td>@mdo</td>
+                              <td>@mdo</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        {/* <DataGrid
+                rows={[
+                  {
+                    id: 1,
+                    col1: "Hello",
+                    col2: "World",
+                    col3: "World",
+                    col4: "World",
+                    col5: "World",
+                    col6: "World",
+                    col7: "World",
+                  },
+                  {
+                    id: 2,
+                    col1: "DataGridPro",
+                    col2: "World",
+                    col3: "World",
+                    col4: "World",
+                    col5: "World",
+                    col6: "World",
+                    col7: "World",
+                  },
+                  {
+                    id: 3,
+                    col1: "MUI",
+                    col2: "World",
+                    col3: "World",
+                    col4: "World",
+                    col5: "World",
+                    col6: "World",
+                    col7: "World",
+                  }
+                ]}
+                columns={[
+                  { field: "col1", headerName: "Name", width: 150 },
+                  { field: "col2", headerName: "Relationship Type", width: 150 },
+                  { field: "col3", headerName: "Dependancy", width: 150 },
+                  { field: "col4", headerName: "Date of Birth", width: 150 },
+                  { field: "col5", headerName: "Blood Group", width: 150 },
+                  { field: "col6", headerName: "Gender", width: 150 },
+                  { field: "col7", headerName: "Action", width: 150 },
+                ]}
+                sx={{ display: "flex", justifyContent: "center", width:"100%" }}
+                
+              /> */}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="employeeInfo ">
+                    <div className="row">
+                      <div className="col-md-12">
+                        <ul
+                          className="nav nav-pills"
+                          id="personalMyTab"
+                          role="tablist"
+                        >
+                          <li className="nav-item">
+                            <a
+                              className="nav-link  active show"
+                              id="skill-tab1"
+                              data-toggle="tab"
+                              href="#skill"
+                              role="tab"
+                              aria-controls="Skill"
+                              aria-selected="true"
+                            >
+                              Skill
+                            </a>
+                          </li>
+                          <li className="nav-item">
+                            <a
+                              className="nav-link"
+                              id="hobby-tab2"
+                              data-toggle="tab"
+                              href="#hobby"
+                              role="tab"
+                              aria-controls="Hobby"
+                              aria-selected="false"
+                            >
+                              Hobby
+                            </a>
+                          </li>
+                          <li className="nav-item">
+                            <a
+                              className="nav-link"
+                              id="cocurricular-tab3"
+                              data-toggle="tab"
+                              href="#cocurricular"
+                              role="tab"
+                              aria-controls="Cocurricular"
+                              aria-selected="false"
+                            >
+                              Co-curricular
+                            </a>
+                          </li>
+                          <li className="nav-item">
+                            <a
+                              className="nav-link"
+                              id="interest-tab4"
+                              data-toggle="tab"
+                              href="#interest"
+                              role="tab"
+                              aria-controls="Interest"
+                              aria-selected="false"
+                            >
+                              Interest
+                            </a>
+                          </li>
+                        </ul>
+                        <div className="tab-content" id="personalMyTabContent2">
+                          <div
+                            className="tab-pane fade active show"
+                            id="skill"
+                            role="tabpanel"
+                            aria-labelledby="skill-tab1"
+                          >
+                            <div className="card">
+                              <div className="card-body">
+                                <div className="employeeInfo ">
+                                  <div className="row">
+                                    <div className="col-md-6 d-flex align-items-center">
+                                      <div className="titleName">
+                                        <h6>Skill</h6>
+                                      </div>
+                                    </div>
+                                    <div className="col-md-6 d-flex justify-content-end">
+                                      <button class="btn btn-outline-info px-4 my-2">
+                                        Add <i class="fa-solid fa-plus"></i>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div className="row">
+                                    <div className="col-md-12">
+                                      <table class="table table-bordered">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">
+                                              Relationship Type
+                                            </th>
+                                            <th scope="col">Dependancy</th>
+                                            <th scope="col">Date of Birth</th>
+                                            <th scope="col">Blood Group</th>
+                                            <th scope="col">Gender</th>
+                                            <th scope="col">Action</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">2</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">3</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            className="tab-pane fade"
+                            id="hobby"
+                            role="tabpanel"
+                            aria-labelledby="hobby-tab2"
+                          >
+                            <div className="card">
+                              <div className="card-body">
+                                <div className="employeeInfo ">
+                                  <div className="row">
+                                    <div className="col-md-6 d-flex align-items-center">
+                                      <div className="titleName">
+                                        <h6>Hobby</h6>
+                                      </div>
+                                    </div>
+                                    <div className="col-md-6 d-flex justify-content-end">
+                                      <button class="btn btn-outline-info px-4 my-2">
+                                        Add <i class="fa-solid fa-plus"></i>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div className="row">
+                                    <div className="col-md-12">
+                                      <table class="table table-bordered">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">
+                                              Relationship Type
+                                            </th>
+                                            <th scope="col">Dependancy</th>
+                                            <th scope="col">Date of Birth</th>
+                                            <th scope="col">Blood Group</th>
+                                            <th scope="col">Gender</th>
+                                            <th scope="col">Action</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">2</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">3</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            className="tab-pane fade"
+                            id="cocurricular"
+                            role="tabpanel"
+                            aria-labelledby="cocurricular-tab3"
+                          >
+                            <div className="card">
+                              <div className="card-body">
+                                <div className="employeeInfo ">
+                                  <div className="row">
+                                    <div className="col-md-6 d-flex align-items-center">
+                                      <div className="titleName">
+                                        <h6>Co-curricular</h6>
+                                      </div>
+                                    </div>
+                                    <div className="col-md-6 d-flex justify-content-end">
+                                      <button class="btn btn-outline-info px-4 my-2">
+                                        Add <i class="fa-solid fa-plus"></i>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div className="row">
+                                    <div className="col-md-12">
+                                      <table class="table table-bordered">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">
+                                              Relationship Type
+                                            </th>
+                                            <th scope="col">Dependancy</th>
+                                            <th scope="col">Date of Birth</th>
+                                            <th scope="col">Blood Group</th>
+                                            <th scope="col">Gender</th>
+                                            <th scope="col">Action</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">2</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">3</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            className="tab-pane fade"
+                            id="interest"
+                            role="tabpanel"
+                            aria-labelledby="interest-tab4"
+                          >
+                            <div className="card">
+                              <div className="card-body">
+                                <div className="employeeInfo ">
+                                  <div className="row">
+                                    <div className="col-md-6 d-flex align-items-center">
+                                      <div className="titleName">
+                                        <h6>Interest</h6>
+                                      </div>
+                                    </div>
+                                    <div className="col-md-6 d-flex justify-content-end">
+                                      <button class="btn btn-outline-info px-4 my-2">
+                                        Add <i class="fa-solid fa-plus"></i>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div className="row">
+                                    <div className="col-md-12">
+                                      <table class="table table-bordered">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">
+                                              Relationship Type
+                                            </th>
+                                            <th scope="col">Dependancy</th>
+                                            <th scope="col">Date of Birth</th>
+                                            <th scope="col">Blood Group</th>
+                                            <th scope="col">Gender</th>
+                                            <th scope="col">Action</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">2</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">3</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="tab-pane fade"
+              id="education"
+              role="tabpanel"
+              aria-labelledby="education-tab1"
+            >
+              <div className="card">
+                              <div className="card-body">
+                                <div className="employeeInfo ">
+                                  <div className="row">
+                                    <div className="col-md-6 d-flex align-items-center">
+                                      <div className="titleName">
+                                        <h6>Qualification</h6>
+                                      </div>
+                                    </div>
+                                    <div className="col-md-6 d-flex justify-content-end">
+                                      <button class="btn btn-outline-info px-4 my-2">
+                                        Add <i class="fa-solid fa-plus"></i>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div className="row">
+                                    <div className="col-md-12">
+                                      <table class="table table-bordered">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">
+                                              Relationship Type
+                                            </th>
+                                            <th scope="col">Dependancy</th>
+                                            <th scope="col">Date of Birth</th>
+                                            <th scope="col">Blood Group</th>
+                                            <th scope="col">Gender</th>
+                                            <th scope="col">Action</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">2</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">3</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="employeeInfo ">
+                                  <div className="row">
+                                    <div className="col-md-6 d-flex align-items-center">
+                                      <div className="titleName">
+                                        <h6>Experience</h6>
+                                      </div>
+                                    </div>
+                                    <div className="col-md-6 d-flex justify-content-end">
+                                      <button class="btn btn-outline-info px-4 my-2">
+                                        Add <i class="fa-solid fa-plus"></i>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div className="row">
+                                    <div className="col-md-12">
+                                      <table class="table table-bordered">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">
+                                              Relationship Type
+                                            </th>
+                                            <th scope="col">Dependancy</th>
+                                            <th scope="col">Date of Birth</th>
+                                            <th scope="col">Blood Group</th>
+                                            <th scope="col">Gender</th>
+                                            <th scope="col">Action</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">2</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">3</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="employeeInfo ">
+                                  <div className="row">
+                                    <div className="col-md-6 d-flex align-items-center">
+                                      <div className="titleName">
+                                        <h6>Activity</h6>
+                                      </div>
+                                    </div>
+                                    <div className="col-md-6 d-flex justify-content-end">
+                                      <button class="btn btn-outline-info px-4 my-2">
+                                        Add <i class="fa-solid fa-plus"></i>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div className="row">
+                                    <div className="col-md-12">
+                                      <table class="table table-bordered">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">
+                                              Relationship Type
+                                            </th>
+                                            <th scope="col">Dependancy</th>
+                                            <th scope="col">Date of Birth</th>
+                                            <th scope="col">Blood Group</th>
+                                            <th scope="col">Gender</th>
+                                            <th scope="col">Action</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">2</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">3</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="employeeInfo ">
+                                  <div className="row">
+                                    <div className="col-md-6 d-flex align-items-center">
+                                      <div className="titleName">
+                                        <h6>Scholarship</h6>
+                                      </div>
+                                    </div>
+                                    <div className="col-md-6 d-flex justify-content-end">
+                                      <button class="btn btn-outline-info px-4 my-2">
+                                        Add <i class="fa-solid fa-plus"></i>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div className="row">
+                                    <div className="col-md-12">
+                                      <table class="table table-bordered">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">
+                                              Relationship Type
+                                            </th>
+                                            <th scope="col">Dependancy</th>
+                                            <th scope="col">Date of Birth</th>
+                                            <th scope="col">Blood Group</th>
+                                            <th scope="col">Gender</th>
+                                            <th scope="col">Action</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">2</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">3</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+            </div>
+            <div
+              className="tab-pane fade"
+              id="nomination"
+              role="tabpanel"
+              aria-labelledby="nomination-tab5"
+            >
+              <div className="card">
+                <div className="card-body">
+                <div className="employeeInfo ">
+                    <div className="row">
+                      <div className="col-md-12">
+                        <ul
+                          className="nav nav-pills"
+                          id="nominationMyTab"
+                          role="tablist"
+                        >
+                          <li className="nav-item">
+                            <a
+                              className="nav-link  active show"
+                              id="pf-tab1"
+                              data-toggle="tab"
+                              href="#pf"
+                              role="tab"
+                              aria-controls="PF"
+                              aria-selected="true"
+                            >
+                              PF
+                            </a>
+                          </li>
+                          <li className="nav-item">
+                            <a
+                              className="nav-link"
+                              id="esi-tab2"
+                              data-toggle="tab"
+                              href="#esi"
+                              role="tab"
+                              aria-controls="ESI"
+                              aria-selected="false"
+                            >
+                              ESI
+                            </a>
+                          </li>
+                          <li className="nav-item">
+                            <a
+                              className="nav-link"
+                              id="gratuity-tab3"
+                              data-toggle="tab"
+                              href="#gratuity"
+                              role="tab"
+                              aria-controls="Gratuity"
+                              aria-selected="false"
+                            >
+                              Gratuity
+                            </a>
+                          </li>
+                          <li className="nav-item">
+                            <a
+                              className="nav-link"
+                              id="mediclaim-tab4"
+                              data-toggle="tab"
+                              href="#mediclaim"
+                              role="tab"
+                              aria-controls="Mediclaim"
+                              aria-selected="false"
+                            >
+                              Mediclaim
+                            </a>
+                          </li>
+                          <li className="nav-item">
+                            <a
+                              className="nav-link"
+                              id="insurance-tab5"
+                              data-toggle="tab"
+                              href="#insurance"
+                              role="tab"
+                              aria-controls="Insurance"
+                              aria-selected="false"
+                            >
+                              Life Insurance
+                            </a>
+                          </li>
+                        </ul>
+                        <div className="tab-content" id="nominationMyTabContent2">
+                          <div
+                            className="tab-pane fade active show"
+                            id="pf"
+                            role="tabpanel"
+                            aria-labelledby="pf-tab1"
+                          >
+                            <div className="card">
+                              <div className="card-body">
+                                <div className="employeeInfo ">
+                                  <div className="row">
+                                    <div className="col-md-6 d-flex align-items-center">
+                                      <div className="titleName">
+                                        <h6>PF</h6>
+                                      </div>
+                                    </div>
+                                    <div className="col-md-6 d-flex justify-content-end">
+                                      <button class="btn btn-outline-info px-4 my-2">
+                                        Add <i class="fa-solid fa-plus"></i>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div className="row">
+                                    <div className="col-md-12">
+                                      <table class="table table-bordered">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">
+                                              Relationship Type
+                                            </th>
+                                            <th scope="col">Dependancy</th>
+                                            <th scope="col">Date of Birth</th>
+                                            <th scope="col">Blood Group</th>
+                                            <th scope="col">Gender</th>
+                                            <th scope="col">Action</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">2</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">3</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            className="tab-pane fade"
+                            id="esi"
+                            role="tabpanel"
+                            aria-labelledby="esi-tab2"
+                          >
+                            <div className="card">
+                              <div className="card-body">
+                                <div className="employeeInfo ">
+                                  <div className="row">
+                                    <div className="col-md-6 d-flex align-items-center">
+                                      <div className="titleName">
+                                        <h6>ESI</h6>
+                                      </div>
+                                    </div>
+                                    <div className="col-md-6 d-flex justify-content-end">
+                                      <button class="btn btn-outline-info px-4 my-2">
+                                        Add <i class="fa-solid fa-plus"></i>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div className="row">
+                                    <div className="col-md-12">
+                                      <table class="table table-bordered">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">
+                                              Relationship Type
+                                            </th>
+                                            <th scope="col">Dependancy</th>
+                                            <th scope="col">Date of Birth</th>
+                                            <th scope="col">Blood Group</th>
+                                            <th scope="col">Gender</th>
+                                            <th scope="col">Action</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">2</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">3</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            className="tab-pane fade"
+                            id="gratuity"
+                            role="tabpanel"
+                            aria-labelledby="gratuity-tab3"
+                          >
+                            <div className="card">
+                              <div className="card-body">
+                                <div className="employeeInfo ">
+                                  <div className="row">
+                                    <div className="col-md-6 d-flex align-items-center">
+                                      <div className="titleName">
+                                        <h6>Gratuity</h6>
+                                      </div>
+                                    </div>
+                                    <div className="col-md-6 d-flex justify-content-end">
+                                      <button class="btn btn-outline-info px-4 my-2">
+                                        Add <i class="fa-solid fa-plus"></i>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div className="row">
+                                    <div className="col-md-12">
+                                      <table class="table table-bordered">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">
+                                              Relationship Type
+                                            </th>
+                                            <th scope="col">Dependancy</th>
+                                            <th scope="col">Date of Birth</th>
+                                            <th scope="col">Blood Group</th>
+                                            <th scope="col">Gender</th>
+                                            <th scope="col">Action</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">2</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">3</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            className="tab-pane fade"
+                            id="mediclaim"
+                            role="tabpanel"
+                            aria-labelledby="mediclaim-tab4"
+                          >
+                            <div className="card">
+                              <div className="card-body">
+                                <div className="employeeInfo ">
+                                  <div className="row">
+                                    <div className="col-md-6 d-flex align-items-center">
+                                      <div className="titleName">
+                                        <h6>Mediclaim</h6>
+                                      </div>
+                                    </div>
+                                    <div className="col-md-6 d-flex justify-content-end">
+                                      <button class="btn btn-outline-info px-4 my-2">
+                                        Add <i class="fa-solid fa-plus"></i>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div className="row">
+                                    <div className="col-md-12">
+                                      <table class="table table-bordered">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">
+                                              Relationship Type
+                                            </th>
+                                            <th scope="col">Dependancy</th>
+                                            <th scope="col">Date of Birth</th>
+                                            <th scope="col">Blood Group</th>
+                                            <th scope="col">Gender</th>
+                                            <th scope="col">Action</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">2</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">3</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            className="tab-pane fade"
+                            id="insurance"
+                            role="tabpanel"
+                            aria-labelledby="insurance-tab5"
+                          >
+                            <div className="card">
+                              <div className="card-body">
+                                <div className="employeeInfo ">
+                                  <div className="row">
+                                    <div className="col-md-6 d-flex align-items-center">
+                                      <div className="titleName">
+                                        <h6>Life Insurance</h6>
+                                      </div>
+                                    </div>
+                                    <div className="col-md-6 d-flex justify-content-end">
+                                      <button class="btn btn-outline-info px-4 my-2">
+                                        Add <i class="fa-solid fa-plus"></i>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div className="row">
+                                    <div className="col-md-12">
+                                      <table class="table table-bordered">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">
+                                              Relationship Type
+                                            </th>
+                                            <th scope="col">Dependancy</th>
+                                            <th scope="col">Date of Birth</th>
+                                            <th scope="col">Blood Group</th>
+                                            <th scope="col">Gender</th>
+                                            <th scope="col">Action</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">2</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">3</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>@mdo</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
